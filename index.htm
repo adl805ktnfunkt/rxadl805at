@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Map of Carinthia, Austria</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    /* Style for the map container */
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Map of Carinthia, Austria</h1>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  // Function to initialize the map
+  function initMap() {
+    // Initialize the map centered around Carinthia, Austria
+    var map = L.map('map').setView([46.7227, 14.3002], 8);
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Sample locations in Carinthia
+    var locations = [
+      { name: 'Klagenfurt', lat: 46.6279, lng: 14.3083, info: 'https://www.openstreetmap.org/relation/62222' },
+      { name: 'Villach', lat: 46.6103, lng: 13.8554, info: 'https://www.openstreetmap.org/relation/127049' },
+      { name: 'Wörthersee', lat: 46.6161, lng: 14.2364, info: 'https://www.openstreetmap.org/relation/408230' }
+      // Add more locations as needed
+    ];
+
+    // Loop through the locations and create markers with popups
+    locations.forEach(function(location) {
+      var marker = L.marker([location.lat, location.lng]).addTo(map);
+      
+      marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.info}" target="_blank">More Information</a></p>`);
+    });
+  }
+</script>
+
+<!-- Call the initMap function after the Leaflet library has loaded -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    initMap();
+  });
+</script>
+
+</body>
+</html>
