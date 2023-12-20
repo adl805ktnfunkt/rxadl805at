@@ -1,57 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Map of Carinthia, Austria</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <style>
-    /* Style for the map container */
+    /* Modern layout styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    main {
+      flex-grow: 1;
+      position: relative;
+    }
+
     #map {
-      height: 400px;
+      height: 100%;
       width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 10px 0;
     }
   </style>
 </head>
 <body>
 
-<h1>Map of Carinthia, Austria</h1>
+  <header>
+    <h1>WebRX map</h1>
+  </header>
 
-<div id="map"></div>
+  <main>
+    <div id="map"></div>
+  </main>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script>
-  // Function to initialize the map
-  function initMap() {
-    // Initialize the map centered around Carinthia, Austria
-    var map = L.map('map').setView([46.7227, 14.3002], 8);
+  <footer>
+    <p>&copy; Visit <a href="https://oe8.oevsv.at/ortsstellen/adl805/">ADL805</a></p>
+  </footer>
 
-    // Add OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Function to initialize the map
+    function initMap() {
+      // Initialize the map centered around Carinthia, Austria and zoomed closer to the destinations
+      var map = L.map('map').setView([46.7, 14.2], 10);
 
-    // Sample locations in Carinthia
-    var locations = [
-      { name: 'Klagenfurt', lat: 46.6279, lng: 14.3083, info: 'https://www.openstreetmap.org/relation/62222' },
-      { name: 'Villach', lat: 46.6103, lng: 13.8554, info: 'https://www.openstreetmap.org/relation/127049' },
-      { name: 'Wörthersee', lat: 46.6161, lng: 14.2364, info: 'https://www.openstreetmap.org/relation/408230' }
-      // Add more locations as needed
-    ];
+      // Add OpenStreetMap tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-    // Loop through the locations and create markers with popups
-    locations.forEach(function(location) {
-      var marker = L.marker([location.lat, location.lng]).addTo(map);
-      
-      marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.info}" target="_blank">More Information</a></p>`);
+      // Custom icon using an emoji
+      var satelliteIcon = L.divIcon({
+        html: '<div style="font-size: 24px;">📡</div>',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+      });
+
+      // Sample locations in Carinthia
+      var locations = [
+        { name: 'OE8YML WebRX Nötsch', lat: 46.5886, lng: 13.6204, info: 'https://oe8ymlrx.adl805.at/' },
+        { name: 'OE8LSR WebRX Keutschach', lat: 46.6103, lng: 13.8554, info: 'http://oe8lsr.ddns.net:8070/' },
+        { name: 'OE8CKK WebRX Waidegg', lat: 46.6341, lng: 13.2306, info: 'https://oe8ckkrx.adl805.at/' }
+        // Add more locations as needed
+      ];
+
+      // Loop through the locations and create markers with custom icon and popups
+      locations.forEach(function(location) {
+        var marker = L.marker([location.lat, location.lng], { icon: satelliteIcon }).addTo(map);
+        
+        marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.info}" target="_blank">Station info</a></p>`);
+      });
+    }
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initMap();
     });
-  }
-</script>
-
-<!-- Call the initMap function after the Leaflet library has loaded -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    initMap();
-  });
-</script>
+  </script>
 
 </body>
 </html>
