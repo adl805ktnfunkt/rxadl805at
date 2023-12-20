@@ -23,6 +23,15 @@
       padding: 20px 0;
     }
 
+    header img {
+      width: 120px; /* Adjust the maximum width of the logo */
+      margin-right: 10px; /* Create some space between the logo and title */
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
     main {
       flex-grow: 1;
       position: relative;
@@ -43,7 +52,8 @@
 <body>
 
   <header>
-    <h1>WebRX map</h1>
+    <img src="images/adl805gailtal_logo.jpeg" alt="Logo">
+    <h1>WebRX Map</h1>
   </header>
 
   <main>
@@ -51,7 +61,7 @@
   </main>
 
   <footer>
-    <p>&copy; Visit <a href="https://oe8.oevsv.at/ortsstellen/adl805/">ADL805</a></p>
+    <p>Connecting voices, bridging worlds - Amateur Radio Unites Us All! Brought to you by <a href="https://oe8.oevsv.at/ortsstellen/adl805/">ADL805</a></p>
   </footer>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -77,7 +87,7 @@
       // Sample locations in Carinthia
       var locations = [
         { name: 'OE8YML WebRX Nötsch', lat: 46.5886, lng: 13.6204, info: 'https://oe8ymlrx.adl805.at/' },
-        { name: 'OE8LSR WebRX Keutschach', lat: 46.6103, lng: 13.8554, info: 'http://oe8lsr.ddns.net:8070/' },
+        { name: 'OE8LSR WebRX Keutschach', lat: 46.6057, lng: 14.1383, info: 'http://oe8lsr.ddns.net:8070/' },
         { name: 'OE8CKK WebRX Waidegg', lat: 46.6341, lng: 13.2306, info: 'https://oe8ckkrx.adl805.at/' }
         // Add more locations as needed
       ];
