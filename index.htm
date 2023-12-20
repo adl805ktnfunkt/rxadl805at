@@ -96,7 +96,7 @@
       locations.forEach(function(location) {
         var marker = L.marker([location.lat, location.lng], { icon: satelliteIcon }).addTo(map);
         
-        marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.info}" target="_blank">Station info</a></p>`);
+        marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.info}" target="_blank">Open WebRX</a></p>`);
       });
     }
   </script>
