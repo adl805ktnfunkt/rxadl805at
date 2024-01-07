@@ -96,13 +96,17 @@
         { name: 'Der 11m Web-SDR im Mühlviertel JN78gn', lat: 48.5486555, lng: 14.5359689, sdrlink: 'https://freistadt.my-sdr.net',info: '' }
         // Add more locations as needed
       ];
-
-      // Loop through the locations and create markers with custom icon and popups
-      locations.forEach(function(location) {
-        var marker = L.marker([location.lat, location.lng], { icon: satelliteIcon }).addTo(map);
-        
-        marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.sdrlink}" target="_blank">Open WebRX</a></p><p>${location.info}</p>`);
-      });
+      // Load location data from the external JSON file
+      fetch('locations.json') // Replace with the actual path to your JSON file
+        .then(response => response.json())
+        .then(locations => {
+            // Loop through the locations and create markers with custom icon and popups
+            locations.forEach(function(location) {
+              var marker = L.marker([location.lat, location.lng], { icon: satelliteIcon }).addTo(map);
+              
+              marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.sdrlink}" target="_blank">Open WebRX</a></p><p>${location.info}</p>`);
+        });
+          
     }
   </script>
 
