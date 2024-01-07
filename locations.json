@@ -11,14 +11,14 @@
       "lat": 46.6057,
       "lng": 14.1383,
       "sdrlink": "http://oe8lsr.ddns.net:8070/",
-      "info": ""
+      "info": "Hardware: Raspberry PI 3B+ / RTL-SDR RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br>Antenna: xxxx currently NO ANT!<br>Band support will be adapted frequently.<br>"
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE8CKK\" target=\"_blank\">OE8CKK</a> WebRX Waidegg JN66op",
       "lat": 46.6341,
       "lng": 13.2306,
       "sdrlink": "http://oe8ckkrx.adl805.at/",
-      "info": ""
+      "info": "<b>Device[1]</b>: RTL-SDR-V3 + Diamond X200 2m/70cm<br><b>Device[2]</b>: RTL-SDR-V3 + Diamond X200 2m/70cm<br><b>Device[3]</b>: NeSDR-V4 + QO-100 RX KIT + LNB<br><b>Device[4]</b>: NeSDR-V4 + HamItUpNano + Wire Antenna + UnUn 9:1"
     },
     { 
       "name":"<a href=\"https://www.qrz.com/db/OE8HAM\" target=\"_blank\">OE8HAM</a> WebRX Köttmannsdorf JN76cn", 
