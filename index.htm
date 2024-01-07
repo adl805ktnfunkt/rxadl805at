@@ -100,7 +100,7 @@
         // Add more locations as needed
       ];
       // Load location data from the external JSON file
-      fetch('locations.json') // Replace with the actual path to your JSON file
+      fetch('locations.json', {cache:"no-cache"}) // Replace with the actual path to your JSON file
         .then(response => response.json())
         .then(locations => {
             // Loop through the locations and create markers with custom icon and popups
