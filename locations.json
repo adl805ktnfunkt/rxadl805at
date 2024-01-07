@@ -1,0 +1,52 @@
+[
+    {
+      "name": "<a href=\"https://www.qrz.com/db/OE8YML\" target=\"_blank\">OE8YML</a>  WebRX Nötsch JN66to",
+      "lat": 46.5886,
+      "lng": 13.6204,
+      "sdrlink": "https://oe8ymlrx.adl805.at/",
+      "info": "<b>Hardware:</b> Raspberry PI4B / NOOELEC RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna:</b> D130J<br><br>Band support will be adapted frequently.<br>"
+    },
+    {
+      "name": "<a href=\"https://www.qrz.com/db/OE8LSR\" target=\"_blank\">OE8LSR</a> WebRX Keutschach JN76bo",
+      "lat": 46.6057,
+      "lng": 14.1383,
+      "sdrlink": "http://oe8lsr.ddns.net:8070/",
+      "info": ""
+    },
+    {
+      "name": "<a href=\"https://www.qrz.com/db/OE8CKK\" target=\"_blank\">OE8CKK</a> WebRX Waidegg JN66op",
+      "lat": 46.6341,
+      "lng": 13.2306,
+      "sdrlink": "http://oe8ckkrx.adl805.at/",
+      "info": ""
+    },
+    { 
+      "name":"<a href=\"https://www.qrz.com/db/OE8HAM\" target=\"_blank\">OE8HAM</a> WebRX Köttmannsdorf JN76cn", 
+      "lat": 46.5603,
+      "lng": 14.2357, 
+      "sdrlink": "http://oe8hamrx.adl805.at:8073/",
+      "info": "" 
+    },
+    { 
+      "name": "<a href=\"https://www.qrz.com/db/OE7HEK\" target=\"_blank\">OE7HEK</a> WebRX Kaiserwinkl JN67ep", 
+      "lat": 47.6644, 
+      "lng": 12.4065, 
+      "sdrlink": "https://sdr-kaiserwinkl.net/",
+      "info": "" 
+    },
+    { 
+      "name": "Web SDR Chiemgau JN67jv", 
+      "lat": 47.875, 
+      "lng": 12.75, 
+      "sdrlink": "http://chiemgau.spdns.de/",
+      "info": "" 
+    },
+    { 
+      "name": "Der 11m Web-SDR im Mühlviertel JN78gn",
+      "lat": 48.5486555, 
+      "lng": 14.5359689, 
+      "sdrlink": "https://freistadt.my-sdr.net",
+      "info": "" 
+    }
+
+  ]
