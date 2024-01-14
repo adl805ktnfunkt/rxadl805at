@@ -10,6 +10,16 @@
   <meta property="og:image" content="https://rxlist.adl805.at/images/adl805gailtal_logo.jpeg">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <style>
+    /* Global link styles */
+    a {
+      color: #007bff; /* Link color (blue) */
+      text-decoration: none; /* Remove underlines by default */
+      transition: color 0.2s; /* Add a smooth color transition on hover */
+    }
+
+    a:hover {
+      color: #0056b3; /* Change link color on hover */
+    }
     /* Modern layout styles */
     body {
       font-family: Arial, sans-serif;
@@ -54,8 +64,8 @@
 
     /* Add these styles to your existing <style> block or in a separate CSS file */
     #news-banner {
-      background-color: yellowgreen; /* Background color for the news banner */
-      color: #fff; /* Text color for the news banner */
+      background-color: #f8f8f8; /* Light gray background */
+      color: #333; /* Dark text color */
       text-align: left; /* Keep text left-aligned */
       padding: 10px 0;
       display: flex;
