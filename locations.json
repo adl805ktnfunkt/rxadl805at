@@ -47,6 +47,13 @@
       "lng": 14.5359689, 
       "sdrlink": "https://freistadt.my-sdr.net",
       "info": "<b>Hardware</b>:<br><b>Antenna</b>:"  
+    },
+    {
+      "name": "<a href=\"https://www.qrz.com/db/OE8CXC\" target=\"_blank\">OE8CXC</a> WebRX Spittal JN66ss",
+      "lat": 46.771,
+      "lng": 13.542,
+      "sdrlink": "http://oe8cxcrx.adl805.at/",
+      "info": "<b>Hardware</b>: Raspberry PI 4B+ / DVB-T Stick with RTL2832U - Patience is the key.<br><b>Antenna</b>: <br><br><br>"
     }
 
   ]
