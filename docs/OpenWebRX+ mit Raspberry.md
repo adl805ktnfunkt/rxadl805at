@@ -113,7 +113,7 @@ Nun installiert sich das System und OpenWebRX+
 "cmd" eingeben
 [OK]
 
-![[Pasted image 20240119151345.png|300]]
+![Image](Pasted image 20240119151345.png)
 
 ### SSH-Verbindung aufbauen
 ```console
