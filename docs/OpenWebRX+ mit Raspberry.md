@@ -9,7 +9,7 @@ Erstellt von OE8CXC
 - Stabile und möglichst dauerhafte Internetverbindung (mittels LAN-Kabel oder WLAN)
 - Stromversorgung (230V Steckdose) am Ort, wo das *Software Defined Radio* aufgestellt wird
 - [MicroSD-Karte](https://www.amazon.de/s?k=micro+sd+16+gb) mit mindestens 16 Gigabyte Speicherkapazität
-	  ![Image](img/Pasted%20image%2020240119142426.png)
+	  ![](attachment/5212a8c0e20a7c4ef299014d63c2fd61.png)
 - [Adapter (Speicherkartenleser)](https://www.amazon.de/s?k=micro+sd+adapter+usb) für das Aufspielen des Systems
 
 >[!info] Ungefährer Gesamtpreis
@@ -58,7 +58,7 @@ Hier sollte nun die SD-Karte erscheinen. Diese auswählen
 >Unbedingt doppelt überprüfen, ob die ausgewählte SD-Karte tatsächlich die leere ist, da ansonsten alle Daten von einem anderen Speichermedium gelöscht werden könnten
 
 ### Nun auf NEXT klicken
-![[Pasted image 20240119145459.png|400]]
+![](attachment/3da686a682803c7686133db60f54fa73.png)
 Hier auf **EDIT SETTINGS** klicken
 
 #### General
@@ -82,10 +82,10 @@ Hier auf **EDIT SETTINGS** klicken
 Die Standardwerte übernehmen (nichts ändern)
 
 ### Auf SAVE klicken
-![[Pasted image 20240119150402.png|400]]
+![](attachment/af00008ae8e2ef4349cfc8448817d71a.png)
 Hier **YES** auswählen
 
-![[Pasted image 20240119150433.png|400]]
+![](attachment/45a928b13e06caa3768f91a843160a24.png)
 >[!danger] Überprüfen, ob dies **DEFINITIV** die leere MicroSD-Karte ist!
 >>[!success] Falls dies der Fall ist
 >>**YES** anklicken
@@ -113,7 +113,7 @@ Nun installiert sich das System und OpenWebRX+
 "cmd" eingeben
 [OK]
 
-![Image](Pasted image 20240119151345.png)
+![](attachment/96821488a2c7bef17586f7b66ab2bd9c.png)
 
 ### SSH-Verbindung aufbauen
 ```console
@@ -161,7 +161,7 @@ Passwort erneut eingeben und mit **ENTER** bestätigen
 Dazu einfach einen beliebigen Browser öffnen (Chrome, Firefox, etc.) und in der URL-Leiste `http://sdr-RUFZEICHEN` eingeben
 
 Nun sollte es so aussehen:
-![[Pasted image 20240119153949.png]]
+![](attachment/9220f3e52eaf7aa2945178c985a45318.png)
 
 >[!info] Das Schlimmste ist geschafft!
 >Nun könnte man schon lokal von seinem eigenen Netzwerk auf das SDR zugreifen.
