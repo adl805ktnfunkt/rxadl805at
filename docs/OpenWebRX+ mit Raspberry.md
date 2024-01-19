@@ -9,7 +9,7 @@ Erstellt von OE8CXC
 - Stabile und möglichst dauerhafte Internetverbindung (mittels LAN-Kabel oder WLAN)
 - Stromversorgung (230V Steckdose) am Ort, wo das *Software Defined Radio* aufgestellt wird
 - [MicroSD-Karte](https://www.amazon.de/s?k=micro+sd+16+gb) mit mindestens 16 Gigabyte Speicherkapazität
-	  ![Pasted image 20240119142426.png](Pasted image 20240119142426.png)
+	  ![/img/Pasted image 20240119142426.png](Pasted image 20240119142426.png)
 - [Adapter (Speicherkartenleser)](https://www.amazon.de/s?k=micro+sd+adapter+usb) für das Aufspielen des Systems
 
 >[!info] Ungefährer Gesamtpreis
