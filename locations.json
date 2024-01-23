@@ -57,8 +57,8 @@
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE8CNI\" target=\"_blank\">OE8CNI</a> WebRX Maria Rain JN76dn",
-      "lat": 46.771,
-      "lng": 13.542,
+      "lat": 46.560,
+      "lng": 14.284,
       "sdrlink": "http://oe8cnirx.ddns.net",
       "info": "<b>Hardware</b>: Raspberry PI 4B+ /  NOOELEC RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: ICOM AH-8000<br><br><br>"
     }
