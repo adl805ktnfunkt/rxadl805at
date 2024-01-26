@@ -162,7 +162,7 @@
 
       // Function to load news data from the JSON file
       function loadNewsData() {
-        fetch('news.json') // Replace with the actual path to your JSON file
+        fetch('news.json', {cache:"no-cache"}) // Replace with the actual path to your JSON file
           .then(response => response.json())
           .then(data => {
             newsData = data;
