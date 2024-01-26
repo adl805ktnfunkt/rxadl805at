@@ -64,8 +64,8 @@
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE3FJS\" target=\"_blank\">OE3FJS</a> WebRX Furth an der Triesting JN88aa",
-      "lat": 46.560,
-      "lng": 14.284,
+      "lat": 47.973,
+      "lng": 15.976,
       "sdrlink": "http://oe3fjsrx.adl805.at/",
       "info": "<b>Hardware</b>: Raspberry PI 3B+ /  RTL Stick V3 RTL2832U - Currently only one rx is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: X300<br><br><br>"
     }
