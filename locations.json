@@ -70,7 +70,7 @@
       "info": "<b>Hardware</b>: Raspberry PI 3B+ /  RTL Stick V3 RTL2832U - Currently only one rx is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: X300<br><br><br>"
     },
     {
-      "name": "<a href=\"https://www.qrz.com/db/OE8DSQ\" target=\"_blank\">OE8DSQ</a> WebRX Kötschach JN66mp",
+      "name": "<a href=\"https://www.qrz.com/db/OE8DSQ\" target=\"_blank\">OE8DSQ</a> WebRX Kötschach JN66lq",
       "lat": 46.674,
       "lng": 13.001,
       "sdrlink": "http://oe8dsqrx.adl805.at/",
