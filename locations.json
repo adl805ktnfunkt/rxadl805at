@@ -18,7 +18,7 @@
       "lat": 46.6341,
       "lng": 13.2306,
       "sdrlink": "http://oe8ckkrx.adl805.at/",
-      "info": "Runs on PV-power. If battery is empty and no sun - WebRX is offline - see batt. and PV state on APRS telemetry <a href=\"http://www.findu.com/cgi-bin/tele2.cgi?call=OE8ckk-13&last=240\">here</a>.<b>Hardware</b>: Raspberry PI 3B+ / RTL-SDR RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: xxxx currently NO ANT!<br><br>Band support will be adapted frequently.<br>"
+      "info": "Runs on PV-power. If battery is empty and no sun - WebRX is offline - see batt. and PV state on APRS telemetry <a href=\"http://www.findu.com/cgi-bin/tele2.cgi?call=OE8ckk-13&last=240\">here</a>.<br><br><b>Hardware</b>: Raspberry PI 3B+ / RTL-SDR RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: xxxx currently NO ANT!<br><br>Band support will be adapted frequently.<br>"
     },
     { 
       "name":"<a href=\"https://www.qrz.com/db/OE8HAM\" target=\"_blank\">OE8HAM</a> WebRX Köttmannsdorf JN76cn", 
