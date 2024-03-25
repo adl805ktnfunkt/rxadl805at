@@ -157,7 +157,7 @@
               marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.sdrlink}" target="_blank">Open WebRX</a></p><p>${location.info}</p>`);
             }
             img.onerror = function () {
-              console.log(location.name + " not working")
+              alert(location.name + " not working")
             }
           });
         });
