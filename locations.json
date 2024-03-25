@@ -3,42 +3,42 @@
       "name": "<a href=\"https://www.qrz.com/db/OE8YML\" target=\"_blank\">OE8YML</a>  WebRX Nötsch JN66to",
       "lat": 46.5886,
       "lng": 13.6204,
-      "sdrlink": "https://oe8ymlrx.adl805.at/",
+      "sdrlink": "https://oe8ymlrx.adl805.at",
       "info": "<b>Hardware:</b> Raspberry PI4B / NOOELEC RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna:</b> D130J<br><br>Band support will be adapted frequently.<br>"
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE8LSR\" target=\"_blank\">OE8LSR</a> WebRX Keutschach JN76bo",
       "lat": 46.6057,
       "lng": 14.1383,
-      "sdrlink": "http://oe8lsr.ddns.net:8070/",
+      "sdrlink": "http://oe8lsr.ddns.net:8070",
       "info": "<b>Device[1]</b>: RTL-SDR-V3 + Diamond X200 2m/70cm<br><b>Device[2]</b>: RTL-SDR-V3 + Diamond X200 2m/70cm<br><b>Device[3]</b>: NeSDR-V4 + QO-100 RX KIT + LNB<br><b>Device[4]</b>: NeSDR-V4 + HamItUpNano + Wire Antenna + UnUn 9:1"
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE8CKK\" target=\"_blank\">OE8CKK</a> WebRX Waidegg JN66op",
       "lat": 46.6341,
       "lng": 13.2306,
-      "sdrlink": "http://oe8ckkrx.adl805.at/",
+      "sdrlink": "http://oe8ckkrx.adl805.at",
       "info": "Runs on PV-power. If battery is empty and no sun - WebRX is offline - see batt. and PV state on APRS telemetry <a href=\"http://www.findu.com/cgi-bin/tele2.cgi?call=OE8ckk-13&last=240\">here</a>.<br><br><b>Hardware</b>: Raspberry PI 3B+ / RTL-SDR RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: xxxx currently NO ANT!<br><br>Band support will be adapted frequently.<br>"
     },
     { 
       "name":"<a href=\"https://www.qrz.com/db/OE8HAM\" target=\"_blank\">OE8HAM</a> WebRX Köttmannsdorf JN76cn", 
       "lat": 46.5603,
       "lng": 14.2357, 
-      "sdrlink": "http://oe8hamrx.adl805.at:8073/",
+      "sdrlink": "http://oe8hamrx.adl805.at:8073",
       "info": "<b>Hardware</b>:<br><b>Antenna</b>:" 
     },
     { 
       "name": "<a href=\"https://www.qrz.com/db/OE7HEK\" target=\"_blank\">OE7HEK</a> WebRX Kaiserwinkl JN67ep", 
       "lat": 47.6644, 
       "lng": 12.4065, 
-      "sdrlink": "https://sdr-kaiserwinkl.net/",
+      "sdrlink": "https://sdr-kaiserwinkl.net",
       "info": "<b>Hardware</b>:<br><b>Antenna</b>:"  
     },
     { 
       "name": "Web SDR Chiemgau JN67jv", 
       "lat": 47.875, 
       "lng": 12.75, 
-      "sdrlink": "http://chiemgau.spdns.de/",
+      "sdrlink": "http://chiemgau.spdns.de",
       "info": "<b>Hardware</b>:<br><b>Antenna</b>:" 
     },
     { 
@@ -52,28 +52,28 @@
       "name": "<a href=\"https://www.qrz.com/db/OE8CXC\" target=\"_blank\">OE8CXC</a> WebRX Spittal JN66ss",
       "lat": 46.771,
       "lng": 13.542,
-      "sdrlink": "http://oe8cxcrx.adl805.at/",
+      "sdrlink": "http://oe8cxcrx.adl805.at",
       "info": "<b>Hardware</b>: Raspberry PI 4B+ / DVB-T Stick with RTL2832U - Patience is the key.<br><b>Antenna</b>: X300 <br><br><br>"
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE8CNI\" target=\"_blank\">OE8CNI</a> WebRX Maria Rain JN76dn",
       "lat": 46.560,
       "lng": 14.284,
-      "sdrlink": "http://oe8cnirx.adl805.at/",
+      "sdrlink": "http://oe8cnirx.adl805.at",
       "info": "<b>Hardware</b>: Raspberry PI 4B+ /  NOOELEC RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: ICOM AH-8000<br><br><br>"
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE3FJS\" target=\"_blank\">OE3FJS</a> WebRX Furth an der Triesting JN88aa",
       "lat": 47.973,
       "lng": 15.976,
-      "sdrlink": "http://oe3fjsrx.adl805.at/",
+      "sdrlink": "http://oe3fjsrx.adl805.at",
       "info": "<b>Hardware</b>: Raspberry PI 3B+ /  RTL Stick V3 RTL2832U - Currently only one rx is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: X300<br><br><br>"
     },
     {
       "name": "<a href=\"https://www.qrz.com/db/OE8DSQ\" target=\"_blank\">OE8DSQ</a> WebRX Kötschach JN66mq",
       "lat": 46.674,
       "lng": 13.001,
-      "sdrlink": "http://oe8dsqrx.adl805.at/",
+      "sdrlink": "http://oe8dsqrx.adl805.at",
       "info": "<b>Hardware</b>: Raspberry PI 3B+ /   DVB-T Stick with RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna</b>: Sky Band SE900<br><br><br>"
     }
   ]
