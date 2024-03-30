@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>WebRX Map</title>
+  <meta property="og:image" content="https://rxlist.adl805.at/images/adl805gailtal_logo.jpeg">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+  <style>
+    /* Global link styles */
+    a {
+      color: #007bff; /* Link color (blue) */
+      text-decoration: none; /* Remove underlines by default */
+      transition: color 0.2s; /* Add a smooth color transition on hover */
+    }
+
+    a:hover {
+      color: #0056b3; /* Change link color on hover */
+    }
+    /* Modern layout styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header img {
+      width: 120px; /* Adjust the maximum width of the logo */
+      margin-right: 10px; /* Create some space between the logo and title */
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      flex-grow: 1;
+      position: relative;
+    }
+
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 10px 0;
+    }
+
+    /* Add these styles to your existing <style> block or in a separate CSS file */
+    #news-banner {
+      background-color: #f8f8f8; /* Light gray background */
+      color: #333; /* Dark text color */
+      text-align: left; /* Keep text left-aligned */
+      padding: 10px 0;
+      display: flex;
+      justify-content: center; /* Center content horizontally */
+      align-items: center; /* Center content vertically */
+      height: 100px; /* Set the desired height for the news banner */
+    }
+
+    #news-container {
+      max-width: 80%; /* Adjust the maximum width of the news container as needed */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://oe8.oevsv.at/ortsstellen/adl805/" target="_blank"><img src="images/adl805gailtal_logo.jpeg" alt="Logo"></a>
+    <h1>WebRX Map</h1>
+  </header>
+
+  <!-- Add this div below the header to display the news banner -->
+  <div id="news-banner">
+    <div id="news-container">
+      <h2 id="news-headline"></h2>
+      <p id="news-content"></p>
+    </div>
+  </div>
+  <main>
+    <div id="map"></div>
+  </main>
+
+  <footer>
+    <p>Connecting voices, bridging worlds - Amateur Radio Unites Us All! If you want to add a RX let <a href="mailto:oe8yml@oevsv.at?subject=Adding new RX">us</a> know. You want to build one? Thanks to OE8CXC, here is a <a href="https://github.com/adl805ktnfunkt/rxadl805at/blob/master/docs/OpenWebRX%2B%20mit%20Raspberry.md" target="_blank">Quick start Guide</a>.
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Function to initialize the map
+    function initMap() {
+      // Initialize the map centered around Carinthia, Austria and zoomed closer to the destinations
+      var map = L.map('map').setView([47.6, 14.2], 7);
+
+      // Add OpenStreetMap tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Custom icon using an emoji
+      var satelliteIcon = L.divIcon({
+        html: '<div style="font-size: 24px;">📡</div>',
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+      });
+
+      // Sample locations in Carinthia
+      var locations = [
+        { name: '<a href="https://www.qrz.com/db/OE8YML" target="_blank">OE8YML</a>  WebRX Nötsch JN66to', lat: 46.5886, lng: 13.6204, sdrlink: 'https://oe8ymlrx.adl805.at/',info: '<b>Hardware:</b> Raspberry PI4B / NOOELEC RTL2832U - Currently only one rx [1] is installed so, be aware that one rx session for all users. Patience is the key.<br><b>Antenna:</b> D130J<br><br>Band support will be adapted frequently.<br>' },
+        { name: '<a href="https://www.qrz.com/db/OE8LSR" target="_blank">OE8LSR</a> WebRX Keutschach JN76bo', lat: 46.6057, lng: 14.1383, sdrlink: 'http://oe8lsr.ddns.net:8070/',info: '' },
+        { name: '<a href="https://www.qrz.com/db/OE8CKK" target="_blank">OE8CKK</a> WebRX Waidegg JN66op', lat: 46.6341, lng: 13.2306, sdrlink: 'http://oe8ckkrx.adl805.at/',info: '' },
+        { name: '<a href="https://www.qrz.com/db/OE8HAM" target="_blank">OE8HAM</a> WebRX Köttmannsdorf JN76cn', lat: 46.5603, lng: 14.2357, sdrlink: 'http://oe8hamrx.adl805.at:8073/',info: '' },
+        { name: '<a href="https://www.qrz.com/db/OE7HEK" target="_blank">OE7HEK</a> WebRX Kaiserwinkl JN67ep', lat: 47.6644, lng: 12.4065, sdrlink: 'https://sdr-kaiserwinkl.net/',info: '' },
+        { name: 'Web SDR Chiemgau JN67jv', lat: 47.875, lng: 12.75, sdrlink: 'http://chiemgau.spdns.de/',info: '' },
+        { name: 'Der 11m Web-SDR im Mühlviertel JN78gn', lat: 48.5486555, lng: 14.5359689, sdrlink: 'https://freistadt.my-sdr.net',info: '' }
+        // Add more locations as needed
+      ];
+      // Load location data from the external JSON file
+      fetch('locations.json', {cache:"no-cache"}) // Replace with the actual path to your JSON file
+        .then(response => response.json())
+        .then(locations => {
+            // Loop through the locations and create markers with custom icon and popups
+            locations.forEach(function(location) {
+              var marker = L.marker([location.lat, location.lng], { icon: satelliteIcon }).addTo(map);
+              
+              marker.bindPopup(`<h3>${location.name}</h3><p><a href="${location.sdrlink}" target="_blank">Open WebRX</a></p><p>${location.info}</p>`);
+            });
+          });
+    }
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      initMap();
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const newsBanner = document.getElementById('news-banner');
+      const newsHeadline = document.getElementById('news-headline');
+      const newsContent = document.getElementById('news-content');
+      
+      let currentNewsIndex = 0;
+      let newsData;
+
+      // Function to load news data from the JSON file
+      function loadNewsData() {
+        fetch('news.json', {cache:"no-cache"}) // Replace with the actual path to your JSON file
+          .then(response => response.json())
+          .then(data => {
+            newsData = data;
+            displayNewsItem();
+          })
+          .catch(error => console.error('Error loading news data:', error));
+      }
+
+      // Function to display a news item
+      function displayNewsItem() {
+        if (newsData && newsData.length > 0) {
+          const newsItem = newsData[currentNewsIndex];
+          newsHeadline.innerHTML = newsItem.headline;
+          newsContent.innerHTML = newsItem.content;
+
+          // Increment the current news index and loop back to the first news item if needed
+          currentNewsIndex = (currentNewsIndex + 1) % newsData.length;
+
+          // Animate the news banner (e.g., fade in and out)
+          newsBanner.style.opacity = 0;
+          setTimeout(() => {
+            newsBanner.style.opacity = 1;
+          }, 1000); // Adjust the animation duration as needed
+        }
+      }
+
+      // Load the news data and display the first news item
+      loadNewsData();
+
+      // Rotate news items every 5 seconds (adjust the interval as needed)
+      setInterval(displayNewsItem, 5000);
+    });
+  </script>
+</body>
+</html>
